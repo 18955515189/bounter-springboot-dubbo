@@ -23,6 +23,7 @@ public class BounterController {
 
 	@GetMapping("/{id}")
 	public ResponseData<?> get(@PathVariable Long id) {
+		System.out.println("consumer:请求重试");
 		return new ResponseData<>().success().data(bounterService.findById(id));
 	}
 
